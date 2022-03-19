@@ -160,8 +160,9 @@ const handleAddress = (e) => {
         
         
                     <div className="text">
-                      <p>{t("COMPARE HEALTH INSURANCE")}</p>
-                       <h5>{t("With the comparison of health insurance premiums 2022, find the ideal health insurance.")}</h5>
+                       {/* <p>{t("COMPARE HEALTH INSURANCE")}</p> */}
+                       <h5>{t("head phrase one")}</h5>
+                       <h5>{t("head phrase two")}</h5>
 
                     </div>
         
