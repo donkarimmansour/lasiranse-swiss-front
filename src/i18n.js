@@ -58,6 +58,8 @@ const resources = {
       "works name four": "Complementary health insurance",
       "works desk four": "Unlike basic insurance, supplementary insurance coverage varies from insurer to insurer. So it is worth comparing. With supplementary insurance, insurers are free to set premiums according to risk, i.e. according to their age and gender. They can also impose reservations or refuse applicants without giving a reason.",
       "calculate": "calculate",
+      "Result": "Result",
+      "page home": "Page home",
 
     }
   },
@@ -116,6 +118,9 @@ const resources = {
       "works name four": "Assurance maladie complémentaire",
       "works desk four": "Contrairement à l'assurance de base, la couverture d'assurance complémentaire varie d'un assureur à l'autre. Donc, cela vaut la peine de comparer. Avec l’assurance complémentaire, les assureurs sont libres de fixer les primes en fonction du risque, c’est-à-dire en fonction de leur âge et de leur sexe. Ils peuvent également imposer des réserves ou refuser des demandeurs sans donner de raison.",
       "calculate": "calculer",
+
+      "Result": "Résultat",
+      "page home": "Page d'accueil",
     },
   },
 
@@ -174,6 +179,9 @@ const resources = {
       "works name four": "Ergänzende Krankenversicherung",
       "works desk four": "Im Gegensatz zur Grundversicherung ist der Versicherungsschutz in der Zusatzversicherung von Versicherer zu Versicherer unterschiedlich. Vergleichen lohnt sich also. Bei der Zusatzversicherung können die Versicherer die Prämie frei nach Risiko, also nach Alter und Geschlecht festsetzen. Sie können auch Vorbehalte aussprechen oder Anträge ablehnen ohne Angabe von Gründen.",
       "calculate": "Berechnung",
+
+      "Result": "Ergebnis",
+      "page home": "Seite nach Hause",
     },
   },
 
@@ -231,6 +239,8 @@ const resources = {
       "works name four": "Assicurazione sanitaria complementare",
       "works desk four": "A differenza dell'assicurazione di base, la copertura assicurativa complementare varia da assicuratore ad assicuratore. Quindi vale la pena confrontare. Con l'assicurazione complementare, gli assicuratori sono liberi di fissare i premi in base al rischio, ovvero in base all'età e al sesso. Possono anche imporre riserve o rifiutare i candidati senza fornire una motivazione.",
       "calculate": "calcolare",
+      "Result": "Risultato",
+      "page home": "Pagina iniziale",
     },
   }
 };

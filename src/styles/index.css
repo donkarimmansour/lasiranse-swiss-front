@@ -254,6 +254,10 @@
     padding-bottom: 120px;
     justify-content: center;
   }
+
+  .landing.res .container {
+    align-items: flex-start;
+  }
   .landing .text {
     padding: 20px 20px 10px 20px;
     flex: 1;

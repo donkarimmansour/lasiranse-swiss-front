@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import "../styles/indexpage.css"
+import "../../styles/indexpage.css"
 
 
 const setTitle = () => {
