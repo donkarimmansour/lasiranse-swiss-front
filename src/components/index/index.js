@@ -112,6 +112,7 @@ const Index = () => {
   }
 
 
+  
   return (
 
     <Fragment>
@@ -119,23 +120,14 @@ const Index = () => {
 
 
       {/* <!-- Start Landing --> */}
-      <div className="landing">
-
+      <div className="landing" >
+ 
         {loading && loader()}
 
 
         <div className="container">
 
           <div className="calc">
-
-
-            <div className="text">
-              {/* <p>{t("COMPARE HEALTH INSURANCE")}</p> */}
-              <h5>{t("head phrase one")}</h5>
-              <h5>{t("head phrase two")}</h5>
-
-            </div>
-
 
             <div className="form">
               <span className="title">{t("calculate")}</span>
@@ -281,14 +273,23 @@ const Index = () => {
 
 
 
-          <div className="image">
+          {/* <div className="image">
             <img src="imgs/landing-image.png" alt="" />
-          </div>
+          </div> */}
+
+          
+             <div className="text">
+              {/* <p>{t("COMPARE HEALTH INSURANCE")}</p> */}
+              <p>{t("head phrase one")}</p>
+              <br/>
+              <p>{t("head phrase two")}</p>
+
+            </div>
 
 
 
         </div>
-        <a href="#articles" className="go-down">
+        <a href="#services" className="go-down">
           <i className="fas fa-angle-double-down fa-2x"></i>
         </a>
       </div>

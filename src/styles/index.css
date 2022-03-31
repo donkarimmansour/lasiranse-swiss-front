@@ -232,21 +232,38 @@
  
   /* End Header */
   /* Start Landing */
+
+  
   .landing {
     position: relative;
   }
+
   .landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background-image: url(../../public/imgs/landing-image.jpg);
+    background-size: cover;
+    opacity: 0.2;
+  }
+  .landing::after {
     content: "";
     position: absolute;
     left: 0;
     top: -40px;
     width: 100%;
     height: 100%;
-    background-color: #ececec;
     z-index: -1;
     transform: skewY(-6deg);
     transform-origin: top left;
+    background-color: #2196f3;
+    opacity: 0.2;
   }
+
   .landing .container {
     min-height: calc(100vh - 72px);
     display: flex;
@@ -259,7 +276,7 @@
     align-items: flex-start;
   }
   .landing .text {
-    padding: 20px 20px 10px 20px;
+    padding: 0px 20px 10px 20px;
     flex: 1;
   }
 
@@ -268,11 +285,7 @@
     font-style: italic;
     font-weight: 500;
   }
-  @media (max-width: 991px) {
-    .landing .text {
-      text-align: center;
-    }
-  }
+ 
   .landing .text h1 {
     font-size: 40px;
     margin: 0;
@@ -284,12 +297,16 @@
     }
   }
   .landing .text p {
-    font-size: 23px;
-    line-height: 1.7;
-    margin: 5px 0 0;
-    color: #666;
-    max-width: 500px;
-  }
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 5px 0px 20px 0;
+    color: rgb(53, 52, 52);
+    text-align: center; 
+    font-weight: 700; 
+    padding: 0px 40px;
+}
+
+
   @media (max-width: 991px) {
     .landing .text p {
       margin: 10px auto;
@@ -300,15 +317,15 @@
       font-size: 18px;
     }
 
-    .landing .image {
+    .landing .text {
       display: none;
     }
   }
-  .landing .image{
+  .landing .text{
     text-align: center;
   }
   
-  .landing .image img {
+  .landing .text {
     position: relative;
     width: 65%;
     animation: up-and-down 5s linear infinite;
@@ -709,8 +726,8 @@ box-decoration-break: clone;
   margin-top: 10px;
 }
 
-.form form{
-  margin-top: 20px;
+.form{
+  margin-top: 30px;
 }
 
 .form .input-field{
