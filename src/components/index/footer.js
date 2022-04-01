@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const setTitle = () => {
   document.title = "Comparer votre prime gratuitement"
@@ -16,7 +17,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="box">
-          <h3>Compare Prime</h3>
+          <h3 ><Link to="/" className="logo"><img style={{width : "200px"}} src="imgs/logo4.png"/></Link></h3>
         
           {/* <p className="text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste aspernatur

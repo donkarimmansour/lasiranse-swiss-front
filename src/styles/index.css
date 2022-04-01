@@ -123,6 +123,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
+  }
+  .header .logo img {
+    width: 100%;
+    padding: 0px 30px;
   }
   @media (max-width: 767px) {
     .header .logo {
@@ -137,8 +142,9 @@
     position: relative;
 }
 .nav-links ul li img {
-  width: 30px;
+  width: 28px;
   max-width: 100%;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
 }
 
 .drop-down-lang {
@@ -180,12 +186,12 @@
 
 .nav-links ul li {
     list-style-type: none;
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
 }
 
 .nav-links ul li img {
-    width: 30px;
+    width: 25px;
     max-width: 100%;
 }
 
