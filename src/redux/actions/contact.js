@@ -4,7 +4,7 @@ import { START_LOADING, STOP_LOADING } from "../constans/loading"
 import {  Create } from "../../services/contact"
 
 
-const create_contact = (values) => async dispatch => {
+const create_contact = (values, type) => async dispatch => {
     dispatch({ type: START_LOADING })
 
     Create(values).then(({ data }) => {
@@ -15,7 +15,7 @@ const create_contact = (values) => async dispatch => {
                 type: "CREATE"
             })
             dispatch({ type: CLEAR_MESSAGE})
-            dispatch({ type: SHOW_SUCCESS_MESSAGE, payload : "created" })
+            dispatch({ type: SHOW_SUCCESS_MESSAGE, payload : type })
         } else {
             
             dispatch({ type: STOP_LOADING })

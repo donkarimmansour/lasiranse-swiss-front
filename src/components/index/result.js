@@ -22,17 +22,18 @@ const Result = () => {
     {/* <!-- Start Landing --> */}
     <div className="landing res">
 
+    <div className="anim-elements">
+          <div className="anim-element"><i className="fas fa-thumbs-up"></i></div>
+          <div className="anim-element"><i className="fas fa-comments"></i></div>
+          <div className="anim-element"><i className="fas fa-heart"></i></div>
+          <div className="anim-element"><i className="fas fa-users"></i></div>
+          <div className="anim-element"><i className="fas fa-grin-beam"></i></div>
+      </div>
+
+      
       <div className="container">
 
           <div className="calc">
-
-
-            <div className="text">
-               {/* <p>{t("COMPARE HEALTH INSURANCE")}</p> */}
-               <h5>{t("head phrase one")}</h5>
-               <h5>{t("head phrase two")}</h5>
-
-            </div>
 
 
              <div className="form">
@@ -49,9 +50,19 @@ const Result = () => {
 
 
 
-        <div className="image">
+        {/* <div className="image">
           <img src="imgs/landing-image.png" alt="" />
-        </div>
+        </div> */}
+
+             <div className="text">
+              {/* <p>{t("COMPARE HEALTH INSURANCE")}</p> */}
+              <p>{t("head phrase one")}</p>
+              <br/>
+              <p>{t("head phrase two")}</p>
+
+            </div>
+
+
 
 
 

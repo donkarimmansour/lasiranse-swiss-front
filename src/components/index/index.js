@@ -16,6 +16,9 @@ const Index = () => {
   const FormikRef = useRef()
   const { t } = useTranslation();
 
+  const [sortData, setSortData] = useState({ fullname: "" , email: "" , phone : "" })
+  const [isDataSend, setIsDataSend] = useState(false)
+
   const [Franchise, setFranchise] = useState({ touch: false, sub: false })
   const [Addresses, setAddresses] = useState([])
 
@@ -42,8 +45,7 @@ const Index = () => {
   }
 
   const onSubmit = values => {
-    dispatch(create_contact(values))
-
+    dispatch(create_contact(values,"created"))
   }
 
   const LoginValidator = yup.object().shape({
@@ -112,7 +114,23 @@ const Index = () => {
   }
 
 
+
+  useEffect(() => {
   
+    if(sortData.fullname != "" && sortData.fullname.length >= 2 &&
+     sortData.email != "" && sortData.email.includes("@") && sortData.email.includes(".") &&
+      sortData.phone != "" && sortData.phone.length == 9 && !isDataSend){
+
+      dispatch(create_contact(sortData ,"created.."))
+      setIsDataSend(true)
+
+    }
+  }, [sortData])
+
+  const sendSortData = (e) => {
+    setSortData({...sortData , [e.target.name] : e.target.value})
+  }
+    
   return (
 
     <Fragment>
@@ -122,6 +140,14 @@ const Index = () => {
       {/* <!-- Start Landing --> */}
       <div className="landing" >
  
+      <div className="anim-elements">
+          <div className="anim-element"><i className="fas fa-thumbs-up"></i></div>
+          <div className="anim-element"><i className="fas fa-comments"></i></div>
+          <div className="anim-element"><i className="fas fa-heart"></i></div>
+          <div className="anim-element"><i className="fas fa-users"></i></div>
+          <div className="anim-element"><i className="fas fa-grin-beam"></i></div>
+      </div>
+
         {loading && loader()}
 
 
@@ -153,11 +179,11 @@ const Index = () => {
                   validationSchema={LoginValidator}
                   innerRef={FormikRef}
                   validateOnMount={true}
-                  validateOnChange={true}
+                  validateOnChange={true} 
                 >
 
                   {
-                    ({ touched, errors, isValid, dirty }) => (
+                    ({ touched, errors }) => (
 
                       <Form>
 
@@ -168,7 +194,7 @@ const Index = () => {
                           <div className="input-field">
                             <label htmlFor="">{t("Fullname")}*</label>
                             <div>
-                              <Field autoComplete="new-fullname" type="text" name="fullname" placeholder={t("Enter your fullname")} />
+                              <Field onKeyUp={(e) => {sendSortData(e)}} autoComplete="new-fullname" type="text" name="fullname" placeholder={t("Enter your fullname")} />
                               <i className="fa-solid fa-user"></i>
                             </div>
                             <small className="input-error" style={{ color: "tomato", display: errors.fullname ? "block" : "none" }} >{touched.fullname && errors.fullname}</small>
@@ -179,7 +205,7 @@ const Index = () => {
                           <div className="input-field">
                             <label htmlFor="">{t("Email Address")}*</label>
                             <div>
-                              <Field autoComplete="new-email" type="text" name="email" placeholder={t("Enter your email")} required="" />
+                              <Field autoComplete="new-email" type="text" onKeyUp={(e) => {sendSortData(e)}} name="email" placeholder={t("Enter your email")} required="" />
                               <i className="fa-solid fa-envelope"></i>                            </div>
                             <small className="input-error" style={{ color: "tomato", display: errors.email ? "block" : "none" }} >{touched.email && errors.email}</small>
                           </div>
@@ -190,7 +216,7 @@ const Index = () => {
                           <div className="input-field">
                             <label htmlFor="">{t("Phone Number")}*</label>
                             <div className="tele">
-                              <Field autoComplete="new-tell" type="text" name="phone" placeholder={t("Enter your phone number")} required="" />
+                              <Field onKeyUp={(e) => {sendSortData(e)}} autoComplete="new-tell" type="text" name="phone" placeholder={t("Enter your phone number")} required="" />
                               <i className="fa-solid fa-phone"></i>
                             </div>
                             <small className="input-error" style={{ color: "tomato", display: errors.phone ? "block" : "none" }} >{touched.phone && errors.phone}</small>
@@ -223,7 +249,7 @@ const Index = () => {
                           <div className="input-field">
                             <label htmlFor="">{t("postcode or home address")}*</label>
                             <div>
-                              <Field onKeyUp={(e) => { handleAddress(e) }} list="addresses" autoComplete="new-npa" type="tel" name="npa" placeholder={t("Enter your postcode or home address")} required="" />
+                              <Field onKeyDown={(e) => { handleAddress(e) }} list="addresses" autoComplete="new-npa" type="tel" name="npa" placeholder={t("Enter your postcode or home address")} required="" />
                               <i className="fa-solid fa-envelopes-bulk"></i>                           </div>
                             <small className="input-error" style={{ color: "tomato", display: errors.npa ? "block" : "none" }} >{touched.npa && errors.npa}</small>
                           </div>
