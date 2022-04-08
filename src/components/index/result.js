@@ -21,14 +21,14 @@ const Result = () => {
 
     {/* <!-- Start Landing --> */}
     <div className="landing res">
-
+{/* 
     <div className="anim-elements">
           <div className="anim-element"><i className="fas fa-thumbs-up"></i></div>
           <div className="anim-element"><i className="fas fa-comments"></i></div>
           <div className="anim-element"><i className="fas fa-heart"></i></div>
           <div className="anim-element"><i className="fas fa-users"></i></div>
           <div className="anim-element"><i className="fas fa-grin-beam"></i></div>
-      </div>
+      </div> */}
 
       
       <div className="container">

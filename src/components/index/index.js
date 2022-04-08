@@ -140,13 +140,13 @@ const Index = () => {
       {/* <!-- Start Landing --> */}
       <div className="landing" >
  
-      <div className="anim-elements">
+      {/* <div className="anim-elements">
           <div className="anim-element"><i className="fas fa-thumbs-up"></i></div>
           <div className="anim-element"><i className="fas fa-comments"></i></div>
           <div className="anim-element"><i className="fas fa-heart"></i></div>
           <div className="anim-element"><i className="fas fa-users"></i></div>
           <div className="anim-element"><i className="fas fa-grin-beam"></i></div>
-      </div>
+      </div> */}
 
         {loading && loader()}
 

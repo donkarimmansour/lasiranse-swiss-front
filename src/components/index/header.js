@@ -22,7 +22,7 @@ const Header = () => {
 
      <div className="container">
 
-       <Link to="/" className="logo"><img src="imgs/logo5.png"/></Link>
+       <Link to="/" className="logo"><img src="imgs/logo6.png"/></Link>
 
        <div className="nav-links">
 
